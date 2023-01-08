@@ -1,0 +1,90 @@
+@font-face {
+  font-family: OpenSans-Bold;
+  src: url("font/OpenSans-Bold.ttf");
+  font-weight: bold;
+}
+body {
+  margin-left: 151px;
+  margin-right: 151px;
+  overflow-x: hidden;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.789),rgba(0,0,0,0.789)
+  ),url(images/background.png);
+}
+.container__header {
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container__header > .logo {
+    height: 34px;
+    width: auto;
+}
+.container__header > .riot{
+    height: 34px;
+    width: auto;
+}
+.container__header > .share{
+    height: 34px;
+    width: auto;
+}
+.container__main {
+  height: 85vh;
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.container__main > .container__character {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+.container__main > .container__character > img {
+  width: 400px;
+  height: 61.28px;
+}
+.container__main > .container__character > .characters {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.container__main > .container__character > .characters > .character {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container__main > .container__character > .characters > .character > img {
+  background-color: #ff4655;
+  width: 170px;
+  height: 170px;
+  clip-path: polygon(15% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 15%);    
+  margin: solid 1px #fff;
+}
+.container__main > .container__character > .characters > .character > p {
+  font-family: OpenSans-Bold;
+  color: #fff;
+}
+.container__main > .container__banner{
+    width: 40vw;
+    display: flex;
+    justify-content: flex-end;
+}
+.container__main > .container__banner > img{
+    height: 85vh;
+    width: auto;
+    animation: chegada 3s;
+}
+@keyframes chegada {
+    from{
+        transform: translatex(300px);
+        opacity: 20%;
+      }
+      to{
+        transform: translatex(0);
+      }
+}
