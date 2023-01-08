@@ -7,9 +7,8 @@ body {
   margin-left: 151px;
   margin-right: 151px;
   overflow-x: hidden;
-  background-image: linear-gradient(
-    rgba(0, 0, 0, 0.789),rgba(0,0,0,0.789)
-  ),url(images/background.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.789), rgba(0, 0, 0, 0.789)),
+    url(images/background.png);
 }
 .container__header {
   height: 15vh;
@@ -18,16 +17,16 @@ body {
   align-items: center;
 }
 .container__header > .logo {
-    height: 34px;
-    width: auto;
+  height: 34px;
+  width: auto;
 }
-.container__header > .riot{
-    height: 34px;
-    width: auto;
+.container__header > .riot {
+  height: 34px;
+  width: auto;
 }
-.container__header > .share{
-    height: 34px;
-    width: auto;
+.container__header > .share {
+  height: 34px;
+  width: auto;
 }
 .container__main {
   height: 85vh;
@@ -62,29 +61,57 @@ body {
   background-color: #ff4655;
   width: 170px;
   height: 170px;
-  clip-path: polygon(15% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 15%);    
+  clip-path: polygon(15% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 15%);
   margin: solid 1px #fff;
 }
 .container__main > .container__character > .characters > .character > p {
   font-family: OpenSans-Bold;
   color: #fff;
 }
-.container__main > .container__banner{
-    width: 40vw;
-    display: flex;
-    justify-content: flex-end;
+.container__main > .container__banner {
+  width: 40vw;
+  display: flex;
+  justify-content: flex-end;
 }
-.container__main > .container__banner > img{
-    height: 85vh;
-    width: auto;
-    animation: chegada 3s;
+.container__main > .container__banner > img {
+  height: 85vh;
+  width: auto;
+  animation: chegada 3s;
 }
 @keyframes chegada {
-    from{
-        transform: translatex(300px);
-        opacity: 20%;
-      }
-      to{
-        transform: translatex(0);
-      }
+  from {
+    transform: translatex(300px);
+    opacity: 20%;
+  }
+  to {
+    transform: translatex(0);
+  }
+}
+@media only screen and (max-width: 955px) {
+  body{
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  .container__header {
+    height: 15vh;
+  }
+  .container__main {
+    height: auto;
+  }
+  .container__header > .share {
+    display: none;
+  }
+  .container__main > .container__character > .characters {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .container__main > .container__character > img {
+    display: none;
+  }
+  .container__main > .container__banner {
+    display: none;
+  }
 }
